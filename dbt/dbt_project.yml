@@ -1,0 +1,17 @@
+name: "auction_house"
+version: "1.0.0"
+config-version: 2
+
+profile: "auction_house"
+
+model-paths: ["models"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+tests:
+  auction_house:
+    +store_failures: true
+    +schema: "etl_failure"

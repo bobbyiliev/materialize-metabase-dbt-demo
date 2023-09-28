@@ -1,0 +1,12 @@
+auction_house:
+  outputs:
+    dev:
+      type: materialize
+      host: "{{ env_var('MZ_HOST') }}"
+      port: "{{ env_var('MZ_PORT', '6875') | int }}"
+      user: "{{ env_var('MZ_USER') }}"
+      password: "{{ env_var('MZ_PW') }}"
+      database: "{{ env_var('MZ_DATABASE') }}"
+      cluster: "{{ env_var('MZ_CLUSTER', 'auction_house') }}"
+      schema: "{{ env_var('MZ_AUCTION_SCHEMA', 'public') }}"
+  target: dev

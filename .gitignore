@@ -1,0 +1,7 @@
+.env
+target
+logs
+dbt_packages
+.terraform
+terraform.tfstate*
+.terraform.lock.hcl
