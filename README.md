@@ -5,10 +5,10 @@
 ## Before you start
 
 - A running Materialize instance
-- The [Materialize Metabase connector](https://github.com/MaterializeInc/metabase-materialize-driver) installed
 - A running Metabase instance
-- Terraform installed
+- The [Materialize Metabase connector](https://github.com/MaterializeInc/metabase-materialize-driver) installed
 - dbt installed
+- Terraform installed (optional)
 
 You can sign up for a free Materialize account [here](https://materialize.com/register/).
 
