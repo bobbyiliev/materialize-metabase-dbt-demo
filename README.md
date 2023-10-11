@@ -5,9 +5,12 @@
 ## Before you start
 
 - A running Materialize instance
+- The [Materialize Metabase connector](https://github.com/MaterializeInc/metabase-materialize-driver) installed
 - A running Metabase instance
 - Terraform installed
 - dbt installed
+
+You can sign up for a free Materialize account [here](https://materialize.com/register/).
 
 ## Running Metabase (optional)
 
@@ -23,6 +26,9 @@ docker run -d -p 3000:3000 materialize/metabase:1.0.3
 
 ## Running the demo
 
+
+![A Terraform Provider for Materialize](https://res.cloudinary.com/mzimgcdn/image/upload/v1682519949/separation-of-roles-for-managing-materialize.png)
+
 - Prepare your environment variables:
 
 ```bash
@@ -36,12 +42,18 @@ cp .env.example .env
 source .env
 ```
 
-- Create a Materialize cluster using Terraform:
+- (Optional) Create a [Materialize cluster using Terraform](https://materialize.com/blog/terraform-provider/):
 
 ```bash
 cd terraform
 terraform init
 terraform apply
+```
+
+As this step is optional, if you don't want to use Terraform, you can skip this step and create a Materialize cluster manually:
+
+```sql
+CREATE CLUSTER auction_house SIZE 'medium';
 ```
 
 - Run the dbt project:
